@@ -7,6 +7,7 @@ app.use(express.json())
 
 // Middleware para servir arquivos estáticos
 app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.static('public'));
 app.use('/styles', express.static(path.join(__dirname, 'views', 'styles')));
 
 app.use(routes)
